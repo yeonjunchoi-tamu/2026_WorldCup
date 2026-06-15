@@ -35,7 +35,7 @@
     teamRating: { home: 7.1, away: 5.8 },
     colors: { home: "#0e8a4d", away: "#f2b200" },
     motm: { team: "home", name: "Julián Quiñones", rating: 8.8 },
-    referee: "윌턴 삼파이우 (브라질)",
+    referee: "Wilton Sampaio (브라질)",
     venueFull: "멕시코시티 스타디움",
     attendance: "83,264",
     summaryText: "개최국 멕시코가 Quiñones와 Raúl Jiménez의 골로 남아공을 2-0으로 제압하며 개막전을 승리로 장식했다. 후반 남아공이 Sithole의 퇴장으로 수적 열세에 몰린 뒤 흐름은 완전히 멕시코로 기울었다.",
@@ -181,7 +181,7 @@
     teamRating: { home: 7.4, away: 6.4 },
     colors: { home: "#d62b34", away: "#2a6fdb" },
     motm: { team: "home", name: "황인범", rating: 8.9 },
-    referee: "아민 오마르 (이집트)",
+    referee: "Amin Omar (이집트)",
     venueFull: "과달라하라 스타디움",
     attendance: "46,210",
     summaryText: "0-0 균형 속 후반 Krejčí에게 헤더 선제골을 내줬지만, 황인범의 동점골과 교체 투입된 오현규의 80분 결승골로 대한민국이 체코를 2-1 역전승으로 꺾었다. 점유율과 슈팅 모두 압도한 완성도 높은 경기였다.",
@@ -767,7 +767,7 @@
     referee: "Slavko Vinčić (슬로베니아)",
     venueFull: "뉴욕·뉴저지 스타디움",
     attendance: "82,100",
-    summaryText: "모로코가 사이바리의 21분 선제골로 앞서갔지만, 비니시우스가 32분 곧바로 동점골로 응수하며 1-1 무승부를 거뒀다. 기대득점에서 근소하게 앞선 모로코가 강호 브라질을 상대로 값진 승점 1점을 따냈다.",
+    summaryText: "모로코가 Saibari의 21분 선제골로 앞서갔지만, Vinícius가 32분 곧바로 동점골로 응수하며 1-1 무승부를 거뒀다. 기대득점에서 근소하게 앞선 모로코가 강호 브라질을 상대로 값진 승점 1점을 따냈다.",
     stats: [
       { label: "점유율", h: 51, a: 49, unit: "%", bar: true },
       { label: "기대득점 (xG)", h: 1.26, a: 1.37, bar: true, dec: true },
@@ -911,7 +911,7 @@
     referee: "Mustapha Ghorbal (알제리)",
     venueFull: "보스턴 스타디움",
     attendance: "37,540",
-    summaryText: "스코틀랜드가 맥긴의 29분 결승골로 아이티를 1-0으로 꺾었다. 아이티가 점유율과 슈팅에서 앞섰지만 유효슈팅 단 2개에 그치며 결정력 부족으로 무득점에 머물렀다.",
+    summaryText: "스코틀랜드가 McGinn의 29분 결승골로 아이티를 1-0으로 꺾었다. 아이티가 점유율과 슈팅에서 앞섰지만 유효슈팅 단 2개에 그치며 결정력 부족으로 무득점에 머물렀다.",
     stats: [
       { label: "점유율", h: 54, a: 46, unit: "%", bar: true },
       { label: "기대득점 (xG)", h: 1.05, a: 1.05, bar: true, dec: true },
@@ -1052,7 +1052,7 @@
     referee: "Jesús Valenzuela (베네수엘라)",
     venueFull: "BC 플레이스 밴쿠버",
     attendance: "52,300",
-    summaryText: "호주가 이란쿤다(27분)와 메트칼프(75분)의 골로, 점유율 72%로 압도한 튀르키예를 2-0으로 잡는 이변을 연출했다. 점유율 28%에 그쳤지만 비치 골키퍼의 8세이브 선방쇼와 날카로운 역습으로 무실점 완승을 거뒀다.",
+    summaryText: "호주가 Irankunda(27분)와 Metcalfe(75분)의 골로, 점유율 72%로 압도한 튀르키예를 2-0으로 잡는 이변을 연출했다. 점유율 28%에 그쳤지만 Beach 골키퍼의 8세이브 선방쇼와 날카로운 역습으로 무실점 완승을 거뒀다.",
     stats: [
       { label: "점유율", h: 28, a: 72, unit: "%", bar: true },
       { label: "기대득점 (xG)", h: 1.18, a: 1.36, bar: true, dec: true },
@@ -1195,7 +1195,7 @@
     referee: "Jalal Jayed (모로코)",
     venueFull: "휴스턴 스타디움",
     attendance: "68,400",
-    summaryText: "독일이 6명이 골을 나눠 넣는 득점 향연 속 퀴라소를 7-1로 대파했다. 하버츠의 멀티골(PK 포함)과 슐로터베크·무시알라·브라운·운다프가 가세하며 xG 4.22의 압도적 경기력을 선보였고, 퀴라소는 코멘시아의 21분 동점골이 유일한 위안이었다.",
+    summaryText: "독일이 6명이 골을 나눠 넣는 득점 향연 속 퀴라소를 7-1로 대파했다. Havertz의 멀티골(PK 포함)과 Schlotterbeck·Musiala·Brown·Undav가 가세하며 xG 4.22의 압도적 경기력을 선보였고, 퀴라소는 Comencencia의 21분 동점골이 유일한 위안이었다.",
     stats: [
       { label: "점유율", h: 65, a: 35, unit: "%", bar: true },
       { label: "기대득점 (xG)", h: 4.22, a: 0.41, bar: true, dec: true },
@@ -1339,7 +1339,7 @@
     referee: "Ismail Elfath (미국)",
     venueFull: "댈러스 스타디움",
     attendance: "58,200",
-    summaryText: "네덜란드가 판 데이크와 서머빌의 골로 2-1 앞섰지만, 일본이 나카무라와 가마다(88분 헤더)의 골로 2-2 무승부를 일궈냈다. 점유율에서 밀린 일본이 후반 교체 카드로 반격에 성공하며 강호를 상대로 값진 승점 1점을 따냈다.",
+    summaryText: "네덜란드가 van Dijk와 Summerville의 골로 2-1 앞섰지만, 일본이 Nakamura와 Kamada(88분 헤더)의 골로 2-2 무승부를 일궈냈다. 점유율에서 밀린 일본이 후반 교체 카드로 반격에 성공하며 강호를 상대로 값진 승점 1점을 따냈다.",
     stats: [
       { label: "점유율", h: 60, a: 40, unit: "%", bar: true },
       { label: "기대득점 (xG)", h: 0.78, a: 0.59, bar: true, dec: true },
@@ -1486,7 +1486,7 @@
     referee: "Michael Oliver (잉글랜드)",
     venueFull: "필라델피아 스타디움",
     attendance: "61,300",
-    summaryText: "코트디부아르가 교체 투입된 아마드 디알로의 90분 결승골로 에콰도르를 1-0으로 꺾었다. 기대득점과 유효슈팅에서 앞선 코트디부아르가 경기 막판 통한의 득점으로 귀중한 승점 3점을 챙겼다.",
+    summaryText: "코트디부아르가 교체 투입된 Amad Diallo의 90분 결승골로 에콰도르를 1-0으로 꺾었다. 기대득점과 유효슈팅에서 앞선 코트디부아르가 경기 막판 통한의 득점으로 귀중한 승점 3점을 챙겼다.",
     stats: [
       { label: "점유율", h: 48, a: 52, unit: "%", bar: true },
       { label: "기대득점 (xG)", h: 1.52, a: 1.01, bar: true, dec: true },
@@ -1629,7 +1629,7 @@
     referee: "Yael Falcón Pérez (멕시코)",
     venueFull: "몬테레이 스타디움",
     attendance: "51,200",
-    summaryText: "스웨덴이 이사크와 예케레스의 골에 더해 아야리의 멀티골(7분·후반 추가시간)로 튀니지를 5-1로 대파했다. 레킥의 헤더 만회골이 있었지만, 이사크가 1골 2도움으로 활약하며 스웨덴의 화력을 이끌었다.",
+    summaryText: "스웨덴이 Isak와 Gyökeres의 골에 더해 Ayari의 멀티골(7분·후반 추가시간)로 튀니지를 5-1로 대파했다. Rekik의 헤더 만회골이 있었지만, Isak가 1골 2도움으로 활약하며 스웨덴의 화력을 이끌었다.",
     stats: [
       { label: "점유율", h: 49, a: 51, unit: "%", bar: true },
       { label: "기대득점 (xG)", h: 1.33, a: 0.28, bar: true, dec: true },
