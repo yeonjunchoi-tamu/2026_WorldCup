@@ -109,8 +109,8 @@
     // 6.15
     "H-0-0": { st: "FT", hg: 0, ag: 0, date: "6.15", time: "11:00", ven: "mbs" },
     "G-0-0": { st: "FT", hg: 1, ag: 1, date: "6.15", time: "14:00", ven: "lumen" },
-    "H-0-1": { st: "UP", date: "6.15", time: "17:00", ven: "att" },
-    "G-0-1": { st: "UP", date: "6.15", time: "20:00", ven: "mbs" },
+    "H-0-1": { st: "FT", hg: 1, ag: 1, date: "6.15", time: "17:00", ven: "hard" },
+    "G-0-1": { st: "FT", hg: 2, ag: 2, date: "6.15", time: "20:00", ven: "sofi" },
     // 6.16
     "I-0-0": { st: "UP", date: "6.16", time: "14:00", ven: "mtlf" },
     "I-0-1": { st: "UP", date: "6.16", time: "17:00", ven: "gil" },
