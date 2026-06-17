@@ -8,7 +8,7 @@ function App() {
   useEffect(() => { document.documentElement.setAttribute("data-theme", theme); localStorage.setItem("wc_theme", theme); }, [theme]);
   const go = (v) => { setView(v); localStorage.setItem("wc_view", v); window.scrollTo(0, 0); };
 
-  const nav = [["dash", "대시보드", "home"], ["groups", "조별리그", "group"], ["bracket", "토너먼트", "bracket"]];
+  const nav = [["dash", "대시보드", "home"], ["groups", "조별리그", "group"], ["bracket", "토너먼트", "bracket"], ["leaders", "기록실", "chart"]];
 
   return (
     <div className="app">
@@ -34,6 +34,7 @@ function App() {
         {view === "dash" && <Dashboard onMatch={setSel} onGroup={() => go("groups")} />}
         {view === "groups" && <GroupsView onMatch={setSel} />}
         {view === "bracket" && <BracketView onMatch={setSel} />}
+        {view === "leaders" && <LeadersView />}
       </main>
 
       <nav className="mobnav">
