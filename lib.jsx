@@ -86,6 +86,7 @@ const ICONS = {
   pin: "M12 21s7-6.4 7-11a7 7 0 10-14 0c0 4.6 7 11 7 11zM12 8a2 2 0 100 4 2 2 0 000-4z",
   cal: "M4 6h16v15H4zM4 9h16M8 3v4M16 3v4",
   clock: "M12 3a9 9 0 100 18 9 9 0 000-18zM12 8v4l3 2",
+  chart: "M3 21h18M6 21V11M12 21V5M18 21v-8",
 };
 function Icon({ name, size = 18, sw = 1.8, fill }) {
   return (
