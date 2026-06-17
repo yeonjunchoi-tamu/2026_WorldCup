@@ -453,14 +453,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: linear-gradient(135deg, var(--surface2), var(--surface)); border: 1px solid var(--line); box-shadow: var(--shadow);
 }
 .lb-lead::before { content: ""; position: absolute; inset: 0; background: radial-gradient(110% 80% at 90% 0%, var(--blue-soft), transparent 60%); pointer-events: none; }
+.lb-lead-stat { margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 .lb-lead-tag {
-  position: absolute; top: 14px; right: 18px; font-family: var(--mono); font-size: 10px; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--gold); font-weight: 700;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--gold); font-weight: 700; white-space: nowrap;
 }
 .lb-lead-info { display: flex; flex-direction: column; gap: 3px; }
 .lb-lead-name { font-size: 21px; font-weight: 800; letter-spacing: -.4px; }
 .lb-lead-team { font-size: 13px; color: var(--tx3); }
-.lb-lead-big { margin-left: auto; font-family: var(--mono); font-weight: 800; font-size: 46px; line-height: 1; letter-spacing: -1px; color: var(--tx); }
+.lb-lead-big { font-family: var(--mono); font-weight: 800; font-size: 46px; line-height: 1; letter-spacing: -1px; color: var(--tx); }
 .lb-lead-big small { font-size: 15px; color: var(--tx3); font-weight: 600; margin-left: 4px; }
 
 .lb-board { display: flex; flex-direction: column; gap: 2px; }
