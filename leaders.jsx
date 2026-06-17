@@ -111,13 +111,15 @@ function LeadersView() {
 
       {top ? (
         <div className="lb-lead">
-          <div className="lb-lead-tag">{meta.label} 1위</div>
           <TeamBadge code={top.code} size={48} />
           <div className="lb-lead-info">
             <div className="lb-lead-name">{top.name}</div>
             <div className="lb-lead-team">{WC.T[top.code].ko}</div>
           </div>
-          <div className="lb-lead-big">{top[cat]}<small>{meta.unit}</small></div>
+          <div className="lb-lead-stat">
+            <div className="lb-lead-tag">{meta.label} 1위</div>
+            <div className="lb-lead-big">{top[cat]}<small>{meta.unit}</small></div>
+          </div>
         </div>
       ) : null}
 
