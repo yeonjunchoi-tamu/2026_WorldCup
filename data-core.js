@@ -123,8 +123,8 @@
     "K-0-1": { st: "FT", hg: 1, ag: 3, date: "6.17", time: "21:00", ven: "azteca" },
     // ── 라운드 2 (MD2) · CST 기준 ──
     // 6.18
-    "A-1-1": { st: "UP", date: "6.18", time: "11:00", ven: "mbs" },
-    "B-1-1": { st: "UP", date: "6.18", time: "14:00", ven: "sofi" },
+    "A-1-1": { st: "FT", hg: 1, ag: 1, date: "6.18", time: "11:00", ven: "mbs" },
+    "B-1-1": { st: "FT", hg: 4, ag: 1, date: "6.18", time: "14:00", ven: "sofi" },
     "B-1-0": { st: "UP", date: "6.18", time: "17:00", ven: "bc" },
     "A-1-0": { st: "UP", date: "6.18", time: "20:00", ven: "guad", note: "주목" },
     // 6.19
