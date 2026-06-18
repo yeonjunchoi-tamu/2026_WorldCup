@@ -117,9 +117,9 @@
     "J-0-0": { st: "FT", hg: 3, ag: 0, date: "6.16", time: "20:00", ven: "arrow", note: "주목" },
     "J-0-1": { st: "FT", hg: 3, ag: 1, date: "6.16", time: "23:00", ven: "levis" },
     // 6.17
-    "K-0-0": { st: "UP", date: "6.17", time: "12:00", ven: "nrg" },
-    "L-0-0": { st: "UP", date: "6.17", time: "15:00", ven: "att", note: "주목" },
-    "L-0-1": { st: "UP", date: "6.17", time: "18:00", ven: "mb" },
+    "K-0-0": { st: "FT", hg: 1, ag: 1, date: "6.17", time: "12:00", ven: "nrg" },
+    "L-0-0": { st: "FT", hg: 4, ag: 2, date: "6.17", time: "15:00", ven: "att", note: "주목" },
+    "L-0-1": { st: "FT", hg: 1, ag: 0, date: "6.17", time: "18:00", ven: "mb" },
     "K-0-1": { st: "UP", date: "6.17", time: "21:00", ven: "azteca" },
     // ── 라운드 2 (MD2) · CST 기준 ──
     // 6.18
