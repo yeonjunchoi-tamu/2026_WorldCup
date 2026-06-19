@@ -125,8 +125,8 @@
     // 6.18
     "A-1-1": { st: "FT", hg: 1, ag: 1, date: "6.18", time: "11:00", ven: "mbs" },
     "B-1-1": { st: "FT", hg: 4, ag: 1, date: "6.18", time: "14:00", ven: "sofi" },
-    "B-1-0": { st: "UP", date: "6.18", time: "17:00", ven: "bc" },
-    "A-1-0": { st: "UP", date: "6.18", time: "20:00", ven: "guad", note: "주목" },
+    "B-1-0": { st: "FT", hg: 6, ag: 0, date: "6.18", time: "17:00", ven: "bc" },
+    "A-1-0": { st: "FT", hg: 1, ag: 0, date: "6.18", time: "20:00", ven: "guad", note: "주목" },
     // 6.19
     "D-1-0": { st: "UP", date: "6.19", time: "14:00", ven: "lumen" },
     "C-1-1": { st: "UP", date: "6.19", time: "17:00", ven: "gil" },
