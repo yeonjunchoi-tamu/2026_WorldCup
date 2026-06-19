@@ -452,6 +452,44 @@ function TabRatings({ m, detail }) {
 
 }
 
+// 슬롯(1A·W97 등) → 실제 팀 코드 or null
+function slotTeam(sl) {
+  if (window.bxResolveSlot) return bxResolveSlot(sl);
+  return WC.T[sl] ? sl : null;
+}
+// 녹아웃 라운드명
+function koRound(m) {
+  const n = +m.id.slice(1);
+  if (n >= 73 && n <= 88) return "32강";
+  if (n >= 89 && n <= 96) return "16강";
+  if (n >= 97 && n <= 100) return "8강";
+  if (n >= 101 && n <= 102) return "4강";
+  if (n === 103) return "3·4위전";
+  if (n === 104) return "결승";
+  return m.id;
+}
+// 스코어라인 팀 헤드 (조별=실제 팀 / 녹아웃=확정 시 팀, 아니면 슬롯 라벨)
+function PslTeamHead({ sl }) {
+  const code = slotTeam(sl);
+  if (code) {
+    return (
+      <div className="psl-team">
+        <TeamBadge code={code} size={52} />
+        <span className="nm">{WC.T[code].ko}</span>
+      </div>
+    );
+  }
+  const { txt, sub } = slotLabel(sl);
+  return (
+    <div className="psl-team">
+      <span className="badge-flag" style={{ width: 52, height: 52, display: "grid", placeItems: "center", background: "var(--surface2)", border: "1px dashed var(--line)" }}>
+        <span className="mono" style={{ fontSize: 13, fontWeight: 800, color: "var(--blue-bright)" }}>{sub}</span>
+      </span>
+      <span className="nm dim" style={{ color: "var(--tx2)" }}>{txt}</span>
+    </div>
+  );
+}
+
 function MatchDetailPanel({ m, onClose }) {
   const [tab, setTab] = useState("summary");
   const detail = m && m.st !== "UP" ? WC_DETAIL[m.id] : null;
@@ -464,7 +502,8 @@ function MatchDetailPanel({ m, onClose }) {
 
   const show = !!m;
   const live = m && m.st === "LIVE",up = m && m.st === "UP";
-  const stageLabel = m ? m.stage === "group" ? `${m.group}조 · ${m.md}차전` : m.id : "";
+  const isKo = m && m.stage === "ko";
+  const stageLabel = m ? (m.stage === "group" ? `${m.group}조 · ${m.md}차전` : `${koRound(m)} · ${m.id}`) : "";
 
   const tabs = detail ? [["summary", "요약"], ["lineup", "라인업"], ["stats", "통계"], ["timeline", "타임라인"], ["ratings", "평점"]] : [];
 
@@ -484,17 +523,20 @@ function MatchDetailPanel({ m, onClose }) {
                 <button className="icon-btn" onClick={onClose} style={{ width: 32, height: 32 }}><Icon name="close" size={18} /></button>
               </div>
               <div className="panel-scoreline">
-                <div className="psl-team">
-                  <TeamBadge code={m.home} size={52} />
-                  <span className="nm">{WC.T[m.home].ko}</span>
-                </div>
+                <PslTeamHead sl={m.home} />
                 <div style={{ textAlign: "center" }}>
                   {up ?
+                (isKo ?
+                <div>
+                      <div className="mono" style={{ fontSize: 13, color: "var(--tx3)" }}>{m.date} · {m.venName}</div>
+                      <div className="psl-score" style={{ fontSize: 22 }}>대진 미정</div>
+                      <div className="mono" style={{ fontSize: 11, color: "var(--blue-bright)" }}>진출 팀 확정 후 자동 업데이트</div>
+                    </div> :
                 <div>
                       <div className="mono" style={{ fontSize: 13, color: "var(--tx3)" }}>{dayLabel(m.dt)} · {locDate(m.dt)}</div>
                       <div className="psl-score" style={{ fontSize: 28 }}>{locTime(m.dt)}</div>
                       <div className="mono" style={{ fontSize: 11, color: "var(--blue-bright)" }}>예정 · 내 시간대 ({TZ_ABBR})</div>
-                    </div> :
+                    </div>) :
 
                 <div>
                       <div className="psl-score">{m.hg}<span className="x">:</span>{m.ag}</div>
@@ -502,10 +544,7 @@ function MatchDetailPanel({ m, onClose }) {
                     </div>
                 }
                 </div>
-                <div className="psl-team">
-                  <TeamBadge code={m.away} size={52} />
-                  <span className="nm">{WC.T[m.away].ko}</span>
-                </div>
+                <PslTeamHead sl={m.away} />
               </div>
               {detail && !up && (() => {
                 const hg = detail.timeline.filter((e) => e.type === "goal" && e.team === "home");
@@ -529,9 +568,10 @@ function MatchDetailPanel({ m, onClose }) {
               {!detail ?
             <div className="preview-empty">
                   <div style={{ display: "grid", placeItems: "center", marginBottom: 16 }}><Icon name="cal" size={40} /></div>
-                  <div className="big">{up ? "경기 예정" : "상세 데이터 준비 중"}</div>
+                  <div className="big">{isKo ? "대진 확정 전" : up ? "경기 예정" : "상세 데이터 준비 중"}</div>
                   <div style={{ fontSize: 13, lineHeight: 1.6 }}>
-                    {up ? <>킥오프: {dayLabel(m.dt)} {locDate(m.dt)} {locTime(m.dt)} <span style={{ color: "var(--tx2)" }}>(내 시간대 {TZ_ABBR})</span> · {m.venName}<br />라인업은 경기 시작 약 1시간 전 공개됩니다.</> : "이 경기의 상세 기록은 곧 제공됩니다."}
+                    {isKo ? <>{koRound(m)} · {m.date} · {m.venName}<br /><b style={{ color: "var(--tx2)" }}>{slotLabel(m.home).txt}</b> 와(과) <b style={{ color: "var(--tx2)" }}>{slotLabel(m.away).txt}</b> 의 대결<br />조별리그와 이전 토너먼트 라운드가 끝나면 진출 팀이 자동으로 채워집니다.</>
+                      : up ? <>킥오프: {dayLabel(m.dt)} {locDate(m.dt)} {locTime(m.dt)} <span style={{ color: "var(--tx2)" }}>(내 시간대 {TZ_ABBR})</span> · {m.venName}<br />라인업은 경기 시작 약 1시간 전 공개됩니다.</> : "이 경기의 상세 기록은 곧 제공됩니다."}
                   </div>
                   {m.note && <div style={{ marginTop: 14 }}><span className="chip blue">{m.note} 경기</span></div>}
                 </div> :
