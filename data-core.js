@@ -128,13 +128,13 @@
     "B-1-0": { st: "FT", hg: 6, ag: 0, date: "6.18", time: "17:00", ven: "bc" },
     "A-1-0": { st: "FT", hg: 1, ag: 0, date: "6.18", time: "20:00", ven: "guad", note: "주목" },
     // 6.19
-    "D-1-0": { st: "UP", date: "6.19", time: "14:00", ven: "lumen" },
-    "C-1-1": { st: "UP", date: "6.19", time: "17:00", ven: "gil" },
-    "C-1-0": { st: "UP", date: "6.19", time: "19:30", ven: "linc" },
-    "D-1-1": { st: "UP", date: "6.19", time: "22:00", ven: "levis" },
+    "D-1-0": { st: "FT", hg: 2, ag: 0, date: "6.19", time: "14:00", ven: "lumen" },
+    "C-1-1": { st: "FT", hg: 0, ag: 1, date: "6.19", time: "17:00", ven: "gil" },
+    "C-1-0": { st: "FT", hg: 3, ag: 0, date: "6.19", time: "19:30", ven: "linc" },
+    "D-1-1": { st: "FT", hg: 0, ag: 1, date: "6.19", time: "22:00", ven: "levis" },
     // 6.20
-    "F-1-0": { st: "UP", date: "6.20", time: "12:00", ven: "nrg" },
-    "E-1-0": { st: "UP", date: "6.20", time: "15:00", ven: "mb", note: "주목" },
+    "F-1-0": { st: "FT", hg: 5, ag: 1, date: "6.20", time: "12:00", ven: "nrg" },
+    "E-1-0": { st: "FT", hg: 2, ag: 1, date: "6.20", time: "15:00", ven: "mb", note: "주목" },
     "E-1-1": { st: "UP", date: "6.20", time: "19:00", ven: "arrow" },
     "F-1-1": { st: "UP", date: "6.20", time: "23:00", ven: "mty" },
     // 6.21
