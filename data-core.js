@@ -135,7 +135,7 @@
     // 6.20
     "F-1-0": { st: "FT", hg: 5, ag: 1, date: "6.20", time: "12:00", ven: "nrg" },
     "E-1-0": { st: "FT", hg: 2, ag: 1, date: "6.20", time: "15:00", ven: "mb", note: "주목" },
-    "E-1-1": { st: "UP", date: "6.20", time: "19:00", ven: "arrow" },
+    "E-1-1": { st: "FT", hg: 0, ag: 0, date: "6.20", time: "19:00", ven: "arrow" },
     "F-1-1": { st: "UP", date: "6.20", time: "23:00", ven: "mty" },
     // 6.21
     "H-1-0": { st: "UP", date: "6.21", time: "11:00", ven: "mbs" },
