@@ -385,7 +385,7 @@ function TabTimeline({ m, detail }) {
   const icon = { goal: "⚽", yellow: "🟨", red: "🟥", sub: "⇄", var: "▣" };
   return (
     <div className="tl">
-      {detail.timeline.slice().reverse().map((e, i) =>
+      {detail.timeline.map((e, i) =>
       <div key={i} className="tl-row">
           <div className={"tl-ev " + (e.team === "home" ? "" : "away")} style={{ visibility: e.team === "home" ? "visible" : "hidden", gridColumn: e.team === "home" ? "1" : "1" }}>
             {e.team === "home" && <><span className={"tl-ic " + e.type}>{icon[e.type]}</span><div><div style={{ fontWeight: 650 }}>{e.player}</div>{e.detail && <div className="tl-det">{e.detail}</div>}</div></>}
