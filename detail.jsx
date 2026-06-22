@@ -60,7 +60,8 @@ function PlayerToken({ p, color, subMin }) {
       <div className="pp-dot" style={{ background: color, color: txt }}>
         <span className="pp-num">{p.n}</span>
         {p.rating != null && <span className={"pp-rt" + (p.motm ? " motm" : "")} style={{ background: ratingBg(p.rating) }}>{p.rating.toFixed(1)}</span>}
-        {p.goal ? <span className="pp-badge pp-goal">⚽{p.goal > 1 ? p.goal : ""}</span> : null}
+        {p.goal ? <span className="pp-badge pp-goal">⚽</span> : null}
+        {p.goal > 1 ? <span className="pp-gct">{p.goal}</span> : null}
         {p.red ? <span className="pp-badge pp-red" /> : p.yellow ? <span className="pp-badge pp-yel" /> : null}
         {subMin != null && <span className="pp-badge pp-sub">↓</span>}
       </div>
