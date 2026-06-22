@@ -139,9 +139,9 @@
     "F-1-1": { st: "FT", hg: 0, ag: 4, date: "6.20", time: "23:00", ven: "mty" },
     // 6.21
     "H-1-0": { st: "FT", hg: 4, ag: 0, date: "6.21", time: "11:00", ven: "mbs" },
-    "G-1-0": { st: "UP", date: "6.21", time: "14:00", ven: "sofi" },
-    "H-1-1": { st: "UP", date: "6.21", time: "17:00", ven: "hard" },
-    "G-1-1": { st: "UP", date: "6.21", time: "20:00", ven: "bc" },
+    "G-1-0": { st: "FT", hg: 0, ag: 0, date: "6.21", time: "14:00", ven: "sofi" },
+    "H-1-1": { st: "FT", hg: 2, ag: 2, date: "6.21", time: "17:00", ven: "hard" },
+    "G-1-1": { st: "FT", hg: 1, ag: 3, date: "6.21", time: "20:00", ven: "bc" },
     // 6.22
     "J-1-0": { st: "UP", date: "6.22", time: "12:00", ven: "att" },
     "I-1-0": { st: "UP", date: "6.22", time: "16:00", ven: "linc", note: "주목" },
