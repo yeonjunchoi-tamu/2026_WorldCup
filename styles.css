@@ -319,6 +319,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* 모서리 배지 */
 .pp-badge { position: absolute; width: 15px; height: 15px; border-radius: 50%; display: grid; place-items: center; font-size: 9px; line-height: 1; box-shadow: 0 1px 4px rgba(0,0,0,.55); }
 .pp-goal { top: -6px; left: -8px; background: #fff; font-size: 9px; font-weight: 800; color: #15171c; }
+.pp-gct { position: absolute; top: -11px; left: -14px; min-width: 14px; height: 14px; padding: 0 2px; border-radius: 7px; background: var(--gold); color: #15171c; font-family: var(--mono); font-weight: 900; font-size: 9.5px; display: grid; place-items: center; box-shadow: 0 1px 4px rgba(0,0,0,.6), inset 0 0 0 1.5px rgba(255,255,255,.85); z-index: 3; }
 .pp-sub { bottom: -6px; right: -8px; background: var(--bg2); color: var(--loss); font-weight: 900; font-size: 11px; }
 .pp-red, .pp-yel { bottom: -5px; left: -7px; width: 11px; height: 14px; border-radius: 2.5px; }
 .pp-red { background: var(--loss); } .pp-yel { background: var(--gold); }
@@ -467,6 +468,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .pp-rt { top: -7px; right: -9px; font-size: 8px; padding: 1px 3px; }
   .pp-badge { width: 12px; height: 12px; font-size: 7px; }
   .pp-goal { top: -5px; left: -6px; font-size: 7px; }
+  .pp-gct { top: -9px; left: -11px; min-width: 11px; height: 11px; font-size: 8px; }
   .pp-sub { bottom: -5px; right: -6px; font-size: 9px; }
   .pp-red, .pp-yel { bottom: -4px; left: -5px; width: 9px; height: 11px; }
   .pp-name { margin-top: 4px; font-size: 8.5px; }
