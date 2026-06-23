@@ -144,7 +144,7 @@
     "G-1-1": { st: "FT", hg: 1, ag: 3, date: "6.21", time: "20:00", ven: "bc" },
     // 6.22
     "J-1-0": { st: "FT", hg: 2, ag: 0, date: "6.22", time: "12:00", ven: "att" },
-    "I-1-0": { st: "UP", date: "6.22", time: "16:00", ven: "linc", note: "주목" },
+    "I-1-0": { st: "FT", hg: 3, ag: 0, date: "6.22", time: "16:00", ven: "linc", note: "주목" },
     "I-1-1": { st: "UP", date: "6.22", time: "19:00", ven: "mtlf" },
     "J-1-1": { st: "UP", date: "6.22", time: "22:00", ven: "levis" },
     // 6.23
