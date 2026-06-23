@@ -21,12 +21,45 @@
 
   <script src="data-core.js"></script>
   <script src="data-matches.js"></script>
-  <script type="text/babel" src="lib.jsx"></script>
-  <script type="text/babel" src="groups.jsx"></script>
-  <script type="text/babel" src="bracket.jsx"></script>
-  <script type="text/babel" src="detail.jsx"></script>
-  <script type="text/babel" src="dashboard.jsx"></script>
-  <script type="text/babel" src="leaders.jsx"></script>
-  <script type="text/babel" src="app.jsx"></script>
+
+  <!-- JSX bootstrap loader: fetch-with-retry + Babel.transform, injected as classic scripts in order.
+       Replaces <script type="text/babel" src> whose synchronous XHR intermittently lost the race
+       against the serve layer's cold cache. Preserves load order & shared global lexical scope. -->
+  <script>
+    (function () {
+      var files = ["lib.jsx", "groups.jsx", "bracket.jsx", "detail.jsx", "dashboard.jsx", "leaders.jsx", "app.jsx"];
+      function fetchRetry(f, n) {
+        return fetch(f, { cache: "reload" }).then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        }).then(function (code) {
+          // Guard against proxy/error-page bodies served with a 200 ("upstream connect error", HTML, etc.)
+          if (/^\s*upstream connect error|^\s*<(?:!doctype|html)/i.test(code) || code.length < 16) {
+            throw new Error("bad body for " + f);
+          }
+          return code;
+        }).catch(function (e) {
+          if (n <= 0) throw e;
+          return new Promise(function (res) { setTimeout(res, 250); }).then(function () { return fetchRetry(f, n - 1); });
+        });
+      }
+      function boot() {
+        var p = Promise.resolve();
+        files.forEach(function (f) {
+          p = p.then(function () {
+            return fetchRetry(f, 12).then(function (code) {
+              var out = Babel.transform(code, { presets: ["react"], filename: f }).code;
+              var s = document.createElement("script");
+              s.textContent = out;
+              document.body.appendChild(s);
+            });
+          });
+        });
+        return p.catch(function (e) { console.error("JSX bootstrap failed:", e); });
+      }
+      if (window.Babel) boot();
+      else window.addEventListener("load", boot);
+    })();
+  </script>
 </body>
 </html>
