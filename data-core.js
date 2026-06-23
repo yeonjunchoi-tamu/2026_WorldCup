@@ -148,7 +148,7 @@
     "I-1-1": { st: "FT", hg: 3, ag: 2, date: "6.22", time: "19:00", ven: "mtlf" },
     "J-1-1": { st: "FT", hg: 1, ag: 2, date: "6.22", time: "22:00", ven: "levis" },
     // 6.23
-    "K-1-0": { st: "UP", date: "6.23", time: "12:00", ven: "nrg" },
+    "K-1-0": { st: "FT", hg: 5, ag: 0, date: "6.23", time: "12:00", ven: "nrg" },
     "L-1-0": { st: "UP", date: "6.23", time: "15:00", ven: "gil" },
     "L-1-1": { st: "UP", date: "6.23", time: "18:00", ven: "mb" },
     "K-1-1": { st: "UP", date: "6.23", time: "21:00", ven: "guad" },
