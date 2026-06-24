@@ -44,18 +44,16 @@
         });
       }
       function boot() {
-        var p = Promise.resolve();
-        files.forEach(function (f) {
-          p = p.then(function () {
-            return fetchRetry(f, 12).then(function (code) {
-              var out = Babel.transform(code, { presets: ["react"], filename: f }).code;
-              var s = document.createElement("script");
-              s.textContent = out;
-              document.body.appendChild(s);
-            });
+        // Fetch all files in parallel (fast), then transform + inject strictly in order
+        // so shared lexical scope / load order is preserved.
+        return Promise.all(files.map(function (f) { return fetchRetry(f, 12); })).then(function (codes) {
+          codes.forEach(function (code, i) {
+            var out = Babel.transform(code, { presets: ["react"], filename: files[i] }).code;
+            var s = document.createElement("script");
+            s.textContent = out;
+            document.body.appendChild(s);
           });
-        });
-        return p.catch(function (e) { console.error("JSX bootstrap failed:", e); });
+        }).catch(function (e) { console.error("JSX bootstrap failed:", e); });
       }
       if (window.Babel) boot();
       else window.addEventListener("load", boot);
