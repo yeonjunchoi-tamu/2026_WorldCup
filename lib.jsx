@@ -28,7 +28,30 @@ function dayLabel(dt) {
   return (d.getMonth() + 1) + "월 " + d.getDate() + "일 " + locWeekday(dt) + "요일";
 }
 
-// ── 국기 ISO 코드 (flagcdn) ──
+// ── 오늘 날짜 + 대회 단계 라벨 (매일 자동 갱신) ──
+// 기준 일정: 조별리그 MD1 6.11~6.17 / MD2 6.18~6.23 / MD3 6.24~6.27
+//           32강 6.28~7.3 / 16강 7.4~7.8 / 8강 7.9~7.13 / 4강 7.14~7.17 / 3·4위전 7.18 / 결승 7.19
+function tourPhase(mo, da) {
+  const v = mo * 100 + da; // 월·일 비교용 정수
+  if (v < 611) return "개막 대기";
+  if (v <= 617) return "조별리그 1라운드";
+  if (v <= 623) return "조별리그 2라운드";
+  if (v <= 627) return "조별리그 3라운드";
+  if (v <= 703) return "토너먼트 32강";
+  if (v <= 708) return "토너먼트 16강";
+  if (v <= 713) return "토너먼트 8강";
+  if (v <= 717) return "토너먼트 4강";
+  if (v === 718) return "3·4위전";
+  if (v === 719) return "결승";
+  return "폐막";
+}
+function todayLabel() {
+  const d = new Date();
+  const mo = d.getMonth() + 1, da = d.getDate();
+  const p = (n) => (n < 10 ? "0" + n : "" + n);
+  return d.getFullYear() + " · " + p(mo) + " · " + p(da) + " — " + tourPhase(mo, da);
+}
+
 const FLAG = {
   MEX: "mx", RSA: "za", KOR: "kr", CZE: "cz", CAN: "ca", BIH: "ba", QAT: "qa", SUI: "ch",
   BRA: "br", MAR: "ma", HAI: "ht", SCO: "gb-sct", USA: "us", PAR: "py", AUS: "au", TUR: "tr",
