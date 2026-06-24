@@ -154,8 +154,8 @@
     "K-1-1": { st: "FT", hg: 1, ag: 0, date: "6.23", time: "21:00", ven: "guad" },
     // ── 라운드 3 (MD3) · CST 기준 (동시 킥오프) ──
     // 6.24
-    "B-2-0": { st: "UP", date: "6.24", time: "14:00", ven: "bc" },
-    "B-2-1": { st: "UP", date: "6.24", time: "14:00", ven: "lumen" },
+    "B-2-0": { st: "FT", hg: 2, ag: 1, date: "6.24", time: "14:00", ven: "bc" },
+    "B-2-1": { st: "FT", hg: 3, ag: 1, date: "6.24", time: "14:00", ven: "lumen" },
     "C-2-0": { st: "UP", date: "6.24", time: "17:00", ven: "hard" },
     "C-2-1": { st: "UP", date: "6.24", time: "17:00", ven: "mbs" },
     "A-2-0": { st: "UP", date: "6.24", time: "20:00", ven: "azteca" },
