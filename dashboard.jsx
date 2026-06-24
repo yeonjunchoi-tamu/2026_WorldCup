@@ -244,7 +244,7 @@ function Dashboard({ onMatch, onGroup }) {
         <span className="lbl">DASHBOARD</span>
         <h2>대시보드</h2>
         <div className="spacer" />
-        <span className="statline">2026 · 06 · 13 — 조별리그 매치데이 1</span>
+        <span className="statline">{todayLabel()}</span>
       </div>
       <LayoutBroadcast d={d} onMatch={onMatch} onGroup={onGroup} />
     </div>
